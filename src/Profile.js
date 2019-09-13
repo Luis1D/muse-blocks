@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MediaPlayer from './components/MediaPlayer';
 import {
   Person,
 } from 'blockstack';
@@ -18,6 +19,11 @@ export default class Profile extends Component {
   	  	  return avatarFallbackImage;
   	  	},
   	  },
+      username: "",
+      newStatus: "",
+      statuses: [],
+      statusIndex: 0,
+      isLoading: false
   	};
   }
 
@@ -28,18 +34,12 @@ export default class Profile extends Component {
       !userSession.isSignInPending() ?
       <div className="panel-welcome" id="section-2">
         <div className="avatar-section">
-          <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } className="img-rounded avatar" id="avatar-image" alt=""/>
+          <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } alt="Profile Picture" className="profile-picture"/>
         </div>
-        <h1>Hello, <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>!</h1>
-        <p className="lead">
-          <button
-            className="btn btn-primary btn-lg"
-            id="signout-button"
-            onClick={ handleSignOut.bind(this) }
-          >
-            Logout
-          </button>
-        </p>
+        <h1 className="user-name">Hello, <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>!</h1>
+        <div>
+          <MediaPlayer />
+        </div>
       </div> : null
     );
   }

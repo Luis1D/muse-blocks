@@ -1,0 +1,40 @@
+@import 'signin';
+@import 'header';
+@import 'profile';
+@import 'variables';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #171820;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    color: rgba(255, 255, 255, 0.884);
+    font-family: $Roboto;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    line-height: .5rem;
+    letter-spacing: .08rem;
+}
+button {
+    width: 10rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.884);
+    border: 1px solid #fff;
+    font-size: .80rem;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(214, 214, 214);
+        color: #000;
+        border: none;
+        transition: .10s ease-in-out;
+    }
+}
+.orange {
+    color: rgb(253, 74, 74);
+}

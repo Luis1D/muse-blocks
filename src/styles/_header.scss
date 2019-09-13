@@ -1,0 +1,16 @@
+header {
+    background-color: #000;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header-logo {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.logout-btn {
+    float: right;
+    margin: .6rem;
+    width: 5rem;
+    height: 1.75rem;
+}
