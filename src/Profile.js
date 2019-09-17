@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import MediaPlayer from './components/MediaPlayer';
-import {
-  Person,
-} from 'blockstack';
+import { Person } from 'blockstack';
 
 const avatarFallbackImage = 'https://s3.amazonaws.com/onename/avatar-placeholder.png';
 
@@ -23,9 +20,11 @@ export default class Profile extends Component {
       newStatus: "",
       statuses: [],
       statusIndex: 0,
-      isLoading: false
+      isLoading: false,
   	};
   }
+
+  
 
   render() {
     const { handleSignOut, userSession } = this.props;
@@ -37,9 +36,6 @@ export default class Profile extends Component {
           <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } alt="Profile Picture" className="profile-picture"/>
         </div>
         <h1 className="user-name">Hello, <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>!</h1>
-        <div>
-          <MediaPlayer />
-        </div>
       </div> : null
     );
   }
