@@ -1,10 +1,26 @@
-.panel-welcome {
+#section-2 {
+    display: flex;
+    flex-direction: column;
+}
+.user-info {
     text-align: center;
-    margin: 4rem 0 1rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 21rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    // border: 1px solid red;
 }
 .user-name {
-    margin: 2rem;
+    // margin: 2rem;
+    padding-top: 1.5rem;
+    height: 2rem;
+    // border: 1px solid red;
 }
 .profile-picture {
-    width: 5rem;
+    min-width: 10rem;
+    border-radius: 50%;
+    margin: 1rem;
+    // border: 1px solid red;
 }

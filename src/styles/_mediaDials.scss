@@ -1,0 +1,35 @@
+.MediaDials {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 3.5rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.song-description {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .song-duration {
+        color: rgba(253, 74, 74, 0.753);
+        margin-top: .25rem;
+    }
+}
+.arrow {
+    padding: 0 1rem 0 1rem;
+    opacity: .5;
+}
+.rewind-btn {
+    transform: rotate(180deg);
+}
+.dial-container {
+    display: flex;
+    margin-right: 2rem;
+}
+.dial {
+    width: 2rem;
+
+}

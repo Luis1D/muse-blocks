@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Person } from 'blockstack';
+import MediaDials from './components/MediaDials';
 
 const avatarFallbackImage = 'https://s3.amazonaws.com/onename/avatar-placeholder.png';
 
@@ -23,19 +24,23 @@ export default class Profile extends Component {
       isLoading: false,
   	};
   }
-
   
 
   render() {
+  // console.log(this.props)
     const { handleSignOut, userSession } = this.props;
     const { person } = this.state;
     return (
       !userSession.isSignInPending() ?
       <div className="panel-welcome" id="section-2">
-        <div className="avatar-section">
-          <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } alt="Profile Picture" className="profile-picture"/>
+        <div className="user-info">
+          <h1 className="user-name"><span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span></h1>
+          <div className="avatar-section">
+            <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } alt="Profile Picture" className="profile-picture"/>
+          </div>
         </div>
-        <h1 className="user-name">Hello, <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>!</h1>
+
+        <MediaDials />
       </div> : null
     );
   }
