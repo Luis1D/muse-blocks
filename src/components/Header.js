@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {} from 'react';
 
 const Header = props => {
-        console.log('HEADER:',props)
+
         return (
         props.userSession.isUserSignedIn() ? 
         <header>
@@ -9,9 +9,13 @@ const Header = props => {
             <div className="button-container">
                 {/* <button onClick={ props.handleSignOut.bind(this) } className="logout-btn">Logout</button> */}
                 <img 
-                    src={require('../assets/logout-web-button.svg')}  
+                    src={require('../assets/logout.svg')}  
                     onClick={ props.handleSignOut.bind(this) }
                     className="logout-btn"
+                />
+                <img 
+                    src={require('../assets/settings.svg')}  
+                    className="settings-btn"
                 />
             </div>
         </header>

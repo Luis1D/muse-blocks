@@ -24,11 +24,6 @@ const  App = () => {
     }
   },[])
 
-// ****
-// console.log(myData)
-console.log('APP.JS: ')
-// ****
-
   const handleSignIn = e => {
     e.preventDefault();
     userSession.redirectToSignIn();

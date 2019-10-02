@@ -1,3 +1,5 @@
+@import "variables";
+
 .MediaDials {
     background-color: rgba(0, 0, 0, 0.5);
     height: 3.5rem;
@@ -5,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 78%;
     margin: 0 auto;
 }
 .song-description {
@@ -14,8 +16,9 @@
     padding: 1rem;
 
     .song-duration {
-        color: rgba(253, 74, 74, 0.753);
+        color: $RedOrangeDim;
         margin-top: .25rem;
+        font-weight: lighter;
     }
 }
 .arrow {
@@ -29,7 +32,12 @@
     display: flex;
     margin-right: 2rem;
 }
+.play-btn {
+    opacity: .6;
+}
 .dial {
     width: 2rem;
-
+    &:hover {
+        cursor: pointer;
+    }
 }

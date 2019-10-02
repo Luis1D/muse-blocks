@@ -1,23 +1,42 @@
+@import "variables";
+
 header {
     background-color: #000;
     height: 3.5rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+    position: fixed;
+    width: 100%;
 }
 .header-logo {
     font-size: 1.5rem;
     padding: 1.2rem;
-}
-// .button-container {
-//     // border: 1px solid red;
-// }
-.logout-btn {
-    float: right;
-    margin: .9rem;
-    width: 4.5rem;
-    height: 1.35rem;
 
+    span {
+        color: $RedOrange;
+    }
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10rem;
+}
+.settings-btn {
+    height: 1.7rem;    
+}
+.settings-btn, .logout-btn {
+    width: 2rem;
+}
+.share-btn {
+    float: right;
+    margin-right: 1.5rem;
+    margin-bottom: .5rem;
+    width: 2rem;
+    height: 1.35rem;
+}
+.settings-btn, .logout-btn, .share-btn {
     &:hover {
         cursor: pointer;
     }

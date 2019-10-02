@@ -3,6 +3,8 @@
 @import 'profile';
 @import 'variables';
 @import 'mediaDials';
+@import 'mediaList';
+
 
 * {
     padding: 0;
@@ -35,7 +37,4 @@ button {
         border: none;
         transition: .10s ease-in-out;
     }
-}
-.orange {
-    color: rgb(253, 74, 74);
 }

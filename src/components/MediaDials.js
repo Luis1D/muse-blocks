@@ -12,6 +12,7 @@ const MediaDials = () => {
                 <img src={require('../assets/play-button.svg')} className="dial play-btn" />
                 <img src={require('../assets/fast-forward-media-control-button.svg')} className="dial fast-forward-btn arrow" />
             </div>
+            
         </div>
     )
 }
