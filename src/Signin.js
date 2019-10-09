@@ -10,7 +10,7 @@ export default class Signin extends Component {
         <h1 className="landing-heading">Welcome to Muse<span className="orange">Block</span></h1>
         <p className="lead">
           <button
-            className="btn btn-primary btn-lg"
+            className="sign-in-btn"
             id="signin-button"
             onClick={ handleSignIn.bind(this) }
           >

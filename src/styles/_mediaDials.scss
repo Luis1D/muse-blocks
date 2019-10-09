@@ -1,7 +1,6 @@
 @import "variables";
 
-.MediaDials {
-    background-color: rgba(0, 0, 0, 0.5);
+#MediaDials {
     height: 3.5rem;
     padding: .5rem;
     display: flex;
@@ -23,7 +22,6 @@
 }
 .arrow {
     padding: 0 1rem 0 1rem;
-    opacity: .5;
 }
 .rewind-btn {
     transform: rotate(180deg);
@@ -31,9 +29,6 @@
 .dial-container {
     display: flex;
     margin-right: 2rem;
-}
-.play-btn {
-    opacity: .6;
 }
 .dial {
     width: 2rem;

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Profile from './Profile.js';
 import Signin from './Signin.js';
-import Header from './components/Header';
+import DayModeContext from './context/DayModeContext';
+import Footer from './components/Footer';
 import {
   UserSession,
   AppConfig
@@ -12,6 +13,7 @@ const userSession = new UserSession({ appConfig: appConfig })
 
 const  App = () => {
   const [myData, setUserData] = useState();
+  const [dayMode, setDayMode] = useState(false);
 
   useEffect(() => {
     if (userSession.isSignInPending()) {
@@ -34,13 +36,21 @@ const  App = () => {
     userSession.signUserOut(window.location.origin);
   }
 
+  const dayModeFunc = () => {
+    setDayMode(!dayMode);
+    console.log("Clicked", dayMode)
+  }
+
     return (
-      <div className="site-wrapper">
-        <Header userSession={userSession} handleSignOut={ handleSignOut } />
+      
+      <div className={ !dayMode ? "site-wrapper" : "day-mode-body" }>
         <div className="site-wrapper-inner">
           { !userSession.isUserSignedIn() ?
             <Signin userSession={userSession} handleSignIn={ handleSignIn } />
-            : <Profile userSession={userSession} handleSignOut={ handleSignOut } />
+            : <DayModeContext.Provider value={{ dayMode, dayModeFunc }}>
+                <Profile dayMode={dayMode} userSession={userSession} handleSignOut={ handleSignOut } />
+                <Footer />
+              </DayModeContext.Provider>
           }
         </div>
       </div>

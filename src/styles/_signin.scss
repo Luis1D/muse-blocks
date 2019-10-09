@@ -1,8 +1,21 @@
+@import 'variables';
+
 .panel-landing {
     text-align: center;
-    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 .landing-heading {
-    margin: 3rem 0 3rem 0;
     font-size: 2.5rem;
+}
+.sign-in-btn {
+    background-color: $Black;
+    font-family: $Roboto;
+    margin: 5rem;
+    width: 15rem;
+
+    &:hover {
+        border: 1px solid grey;
+        transition: .25s ease-in-out;
+    }
 }

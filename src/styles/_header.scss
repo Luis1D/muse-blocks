@@ -1,7 +1,8 @@
 @import "variables";
 
 header {
-    background-color: #000;
+    background-color: $Black;
+    color: $White;
     height: 3.5rem;
     display: flex;
     justify-content: space-between;
@@ -20,8 +21,9 @@ header {
 .button-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 10rem;
+    margin-right: 1rem;
 }
 .settings-btn {
     height: 1.7rem;    
@@ -39,5 +41,19 @@ header {
 .settings-btn, .logout-btn, .share-btn {
     &:hover {
         cursor: pointer;
+    }
+}
+.user-name {
+    padding: 0 0 0 1rem;
+    height: 2.5rem;
+    width: 50%;
+    line-height: 2.25rem;
+    align-self: center;
+    font-size: 1.5rem;
+    text-align: left;
+    border-left: 3px solid $CharLight;
+
+    @media(min-width: 800px) {
+        width: 80%;
     }
 }
